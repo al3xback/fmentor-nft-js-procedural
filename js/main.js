@@ -1,15 +1,3 @@
-const createHeaderEl = () => {
-	const headerEl = document.createElement('header');
-
-	const headerTitleEl = document.createElement('h1');
-	headerTitleEl.className = 'sr-only';
-	headerTitleEl.textContent = 'NFT';
-
-	headerEl.appendChild(headerTitleEl);
-
-	return headerEl;
-};
-
 const createCardEl = () => {
 	const cardEl = document.createElement('article');
 	cardEl.className = 'card';
@@ -108,66 +96,62 @@ const createCardEl = () => {
 	return cardEl;
 };
 
-const createMainEl = () => {
-	const mainEl = document.createElement('main');
+/* header */
+const headerEl = document.createElement('header');
 
-	const mainContainerEl = document.createElement('div');
-	mainContainerEl.className = 'container';
+const headerTitleEl = document.createElement('h1');
+headerTitleEl.className = 'sr-only';
+headerTitleEl.textContent = 'NFT';
 
-	const cardEl = createCardEl();
+headerEl.appendChild(headerTitleEl);
 
-	mainContainerEl.appendChild(cardEl);
+/* main */
+const mainEl = document.createElement('main');
 
-	mainEl.appendChild(mainContainerEl);
+const mainContainerEl = document.createElement('div');
+mainContainerEl.className = 'container';
 
-	return mainEl;
-};
+const cardEl = createCardEl();
 
-const createFooterEl = () => {
-	const footerEl = document.createElement('footer');
+mainContainerEl.appendChild(cardEl);
 
-	const footerContainerEl = document.createElement('div');
-	footerContainerEl.className = 'container';
+mainEl.appendChild(mainContainerEl);
 
-	const footerTextEl = document.createElement('p');
-	footerTextEl.textContent = 'Challenge by ';
+/* footer */
+const footerEl = document.createElement('footer');
 
-	const footerTextLinkCreatorEl = document.createElement('a');
-	footerTextLinkCreatorEl.href =
-		'https://www.frontendmentor.io?ref=challenge';
-	footerTextLinkCreatorEl.className = 'btn btn--link';
-	footerTextLinkCreatorEl.textContent = 'Frontend Mentor';
-	footerTextLinkCreatorEl.rel = 'noopener';
-	footerTextLinkCreatorEl.target = '_blank';
+const footerContainerEl = document.createElement('div');
+footerContainerEl.className = 'container';
 
-	const footerTextLinkCoderEl = document.createElement('a');
-	footerTextLinkCoderEl.href = 'https://github.com/al3xback';
-	footerTextLinkCoderEl.className = 'btn btn--link';
-	footerTextLinkCoderEl.textContent = 'al3xback';
-	footerTextLinkCoderEl.rel = 'noopener';
-	footerTextLinkCoderEl.target = '_blank';
+const footerTextEl = document.createElement('p');
+footerTextEl.textContent = 'Challenge by ';
 
-	footerTextEl.appendChild(footerTextLinkCreatorEl);
-	footerTextEl.append('. Coded by ');
-	footerTextEl.appendChild(footerTextLinkCoderEl);
+const footerTextLinkCreatorEl = document.createElement('a');
+footerTextLinkCreatorEl.href =
+	'https://www.frontendmentor.io?ref=challenge';
+footerTextLinkCreatorEl.className = 'btn btn--link';
+footerTextLinkCreatorEl.textContent = 'Frontend Mentor';
+footerTextLinkCreatorEl.rel = 'noopener';
+footerTextLinkCreatorEl.target = '_blank';
 
-	footerContainerEl.appendChild(footerTextEl);
+const footerTextLinkCoderEl = document.createElement('a');
+footerTextLinkCoderEl.href = 'https://github.com/al3xback';
+footerTextLinkCoderEl.className = 'btn btn--link';
+footerTextLinkCoderEl.textContent = 'al3xback';
+footerTextLinkCoderEl.rel = 'noopener';
+footerTextLinkCoderEl.target = '_blank';
 
-	footerEl.appendChild(footerContainerEl);
+footerTextEl.appendChild(footerTextLinkCreatorEl);
+footerTextEl.append('. Coded by ');
+footerTextEl.appendChild(footerTextLinkCoderEl);
 
-	return footerEl;
-};
+footerContainerEl.appendChild(footerTextEl);
 
-const initApp = () => {
-	const body = document.body;
+footerEl.appendChild(footerContainerEl);
 
-	const headerEl = createHeaderEl();
-	const mainEl = createMainEl();
-	const footerEl = createFooterEl();
+/* initApp */
+const body = document.body;
 
-	body.appendChild(headerEl);
-	body.appendChild(mainEl);
-	body.appendChild(footerEl);
-};
-
-initApp();
+body.appendChild(headerEl);
+body.appendChild(mainEl);
+body.appendChild(footerEl);
