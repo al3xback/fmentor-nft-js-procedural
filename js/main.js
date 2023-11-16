@@ -16,6 +16,7 @@ const createCardEl = () => {
 
 	/* card content */
 	const cardContentEl = document.createElement('div');
+	cardContentEl.className = 'card__content';
 
 	/* card title */
 	const cardTitleEl = document.createElement('h2');
