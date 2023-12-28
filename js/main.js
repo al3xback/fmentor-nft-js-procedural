@@ -128,8 +128,7 @@ const footerTextEl = document.createElement('p');
 footerTextEl.textContent = 'Challenge by ';
 
 const footerTextLinkCreatorEl = document.createElement('a');
-footerTextLinkCreatorEl.href =
-	'https://www.frontendmentor.io?ref=challenge';
+footerTextLinkCreatorEl.href = 'https://www.frontendmentor.io?ref=challenge';
 footerTextLinkCreatorEl.className = 'btn btn--link';
 footerTextLinkCreatorEl.textContent = 'Frontend Mentor';
 footerTextLinkCreatorEl.rel = 'noopener';
