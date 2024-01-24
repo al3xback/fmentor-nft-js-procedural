@@ -102,7 +102,7 @@ const headerEl = document.createElement('header');
 
 const headerTitleEl = document.createElement('h1');
 headerTitleEl.className = 'sr-only';
-headerTitleEl.textContent = 'NFT';
+headerTitleEl.textContent = 'NFT preview card component';
 
 headerEl.appendChild(headerTitleEl);
 
