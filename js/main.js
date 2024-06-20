@@ -7,9 +7,9 @@ const createCardEl = () => {
 	cardImageWrapperEl.className = 'card__image';
 
 	const cardImageEl = document.createElement('img');
+	cardImageEl.src = './images/equilibrium.jpg';
 	cardImageEl.width = 302;
 	cardImageEl.height = 302;
-	cardImageEl.src = './images/equilibrium.jpg';
 	cardImageEl.alt = 'Equilibrium';
 
 	cardImageWrapperEl.appendChild(cardImageEl);
@@ -67,9 +67,9 @@ const createCardEl = () => {
 
 	const cardAuthorImageEl = document.createElement('img');
 	cardAuthorImageEl.className = 'card__author-img';
+	cardAuthorImageEl.src = './images/avatar.png';
 	cardAuthorImageEl.width = 33;
 	cardAuthorImageEl.height = 33;
-	cardAuthorImageEl.src = './images/avatar.png';
 	cardAuthorImageEl.alt = 'Jules Wyvern';
 
 	const cardAuthorDescriptionEl = document.createElement('span');
